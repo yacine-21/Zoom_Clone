@@ -5,17 +5,13 @@ import SearchBar from "../Components/SearchBar";
 import MenuButtons from "../Components/menuButtons";
 import ContactMenu from "../Components/ContactMenu";
 
-function Home() {
+function Home({ navigation }) {
   return (
     <View style={styles.container}>
       <SafeAreaView style={{ height: "100%" }}>
-        {/* Header */}
         <Header />
-        {/* SearchBar */}
         <SearchBar />
-        {/* Menu Buttons */}
-        <MenuButtons />
-        {/* Contacts Menu */}
+        <MenuButtons navigation={navigation} />
         <ContactMenu />
       </SafeAreaView>
     </View>
