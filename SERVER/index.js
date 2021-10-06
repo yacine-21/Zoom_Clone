@@ -9,9 +9,9 @@ app.get("/", (req, res) => {
   res.send("hello world");
 });
 
-io.on("connection", (socket) => {
+io.on("connect", (socket) => {
   console.log("Someone Connected");
-  socket.on("join-room", ({ roomId, userName }) => {
+  socket.on("join-party", ({ roomId, userName }) => {
     console.log("user Joined room");
     console.log(roomId);
     console.log(userName);

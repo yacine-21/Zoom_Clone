@@ -13,7 +13,7 @@ function StartMeeting({ name, roomId, setName, setRoomId, joinRoom }) {
       <View style={styles.info}>
         <TextInput
           placeholder="Enter name"
-          value={name}
+          // value={name}
           placeholderTextColor="#767476"
           style={styles.textInput}
           onChange={(text) => setName(text)}
@@ -21,11 +21,11 @@ function StartMeeting({ name, roomId, setName, setRoomId, joinRoom }) {
       </View>
       <View style={styles.info}>
         <TextInput
-          value={roomId}
+          // value={roomId}
           placeholder="Enter room id"
           placeholderTextColor="#767476"
           style={styles.textInput}
-          onChange={(text) => setName(text)}
+          onChange={(text) => setRoomId(text)}
         />
       </View>
       <View style={{ alignItems: "center" }}>

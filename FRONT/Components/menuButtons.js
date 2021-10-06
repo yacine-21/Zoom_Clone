@@ -27,6 +27,7 @@ const items = [
 ];
 
 function MenuButtons({ navigation }) {
+  //Handler functions
   const openMeeting = () => {
     navigation.navigate("Room");
   };

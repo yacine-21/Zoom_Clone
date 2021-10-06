@@ -3,21 +3,21 @@ import { View, StyleSheet } from "react-native";
 import StartMeeting from "../Components/StartMeeting";
 import { io } from "socket.io-client";
 
-let socket;
+let socket = io();
 
 function MeetingRoom() {
   const [name, setName] = useState();
   const [roomId, setRoomId] = useState();
 
   const joinRoom = () => {
-    socket.emit("join-room", { roomId: roomId, userName: name });
+    socket.emit("join-party", { roomId: roomId, userName: name });
   };
 
   useEffect(() => {
-    const API_URL = "http://064e-176-177-27-107.ngrok.io";
+    const API_URL = "http://4b55-176-177-27-107.ngrok.io";
     socket = io(`${API_URL}`);
-    socket.on("connection", () => {
-      console.log("connected");
+    socket.on("connect", () => {
+      console.log("I'm connected booy!");
     });
   }, []);
 
