@@ -12,28 +12,26 @@ function StartMeeting({ name, roomId, setName, setRoomId, joinRoom }) {
     <View style={styles.startMeetingContainer}>
       <View style={styles.info}>
         <TextInput
-          placeholder="Enter name"
-          // value={name}
-          placeholderTextColor="#767476"
           style={styles.textInput}
-          onChange={(text) => setName(text)}
+          value={name}
+          placeholder="Enter name"
+          placeholderTextColor="#767476"
+          onChangeText={(text) => setName(text)}
         />
       </View>
       <View style={styles.info}>
         <TextInput
-          // value={roomId}
+          style={styles.textInput}
+          value={roomId}
           placeholder="Enter room id"
           placeholderTextColor="#767476"
-          style={styles.textInput}
-          onChange={(text) => setRoomId(text)}
+          onChangeText={(text) => setRoomId(text)}
         />
       </View>
       <View style={{ alignItems: "center" }}>
         <TouchableOpacity
           style={styles.startMeetingButton}
-          onPress={() => {
-            joinRoom();
-          }}
+          onPress={() => joinRoom()}
         >
           <Text style={{ color: "white", fontWeight: "bold" }}>
             Start Meeting
